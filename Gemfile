@@ -14,9 +14,11 @@ gem 'puma', '~> 3.11'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
+
+# gem 'knock' agregando la gem para el sing in y el sing up es similar al gem devise
+gem 'knock'
 # gem 'bcrypt', '~> 3.1.7'
-
-
+gem 'bcrypt'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
