@@ -1,24 +1,23 @@
-# README
+# CreateApi
+Crear una Api de un sistema de entradas y salidas de empleados.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Pre-requisitos 📋
+```
+Tener la version de rails en 5.2.3
+Crear el nuevo proyecto agregandole --api
+Usar Postsgresql.
+Aplicar pruebas con Capybara o Rspec.
+```
+## Requisitos funcionales ⚙️
+*Inicio de sesión de administrador de la empresa
+*Inicio de sesión de empleado
+*El administrador puede marcar la entrada y salida de sus empleados
+*El administrador gestione los reportes de entrada y salida de sus empleados
+*El administrador gestione la información de empleados
+*El empleado revise su reporte de entrada y salida
 
-Things you may want to cover:
+## Autores ✒️
+* **Maria Jose** - *Trabajo Inicial* - [marita30](https:https://github.com/marita30)
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
