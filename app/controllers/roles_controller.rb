@@ -3,7 +3,9 @@ class RolesController < ApplicationController
 
   # GET /roles
   def index
-    @roles = Role.all
+    #Filtrar por parametros name_roles.
+    @roles = Role.all if params["name_roles"].nil?
+    @roles = Role.find_by(name_roles: params[:name_roles]) unless params["name_roles"].nil?
 
     render json: @roles
   end
