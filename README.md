@@ -7,6 +7,7 @@ Tener la version de rails en 5.2.3
 Crear el nuevo proyecto agregandole --api
 Usar Postsgresql.
 Aplicar pruebas con Capybara o Rspec.
+Aplicamos la semilla (seed) para crear por default los roles si es administrador o empleados.
 ```
 ## Requisitos funcionales ⚙️
 *Inicio de sesión de administrador de la empresa
