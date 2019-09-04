@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-  # metodo de autentificacion
   has_secure_password
-  belongs_to :role
   validates :email, presence: true
+  belongs_to :role
 
   def to_token_payload
     {
