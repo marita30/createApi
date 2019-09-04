@@ -18,7 +18,7 @@ Aplicamos la semilla (seed) para crear por default los roles si es administrador
 * El empleado revise su reporte de entrada y salida
 
 ## Routes
-* /users mehtod: post --> create an users.
+* /users method: post --> create users.
 * /users method: get --> Mostrar users.
 
 ## Autores ✒️
