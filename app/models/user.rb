@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
-  validates :email, presence: true
+  #validar el email y que sea unico.
+  validates :email, presence: true, uniqueness: true
   belongs_to :role
 
   def to_token_payload
