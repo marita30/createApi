@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def index
   
     @users = User.all
+    # where(role_id: 2) para filtarlo solo como usuario normal.
+    
     #Estructura de json.
     render json:  {"error": [], "values": @users}, status: :ok
   end
@@ -66,6 +68,6 @@ class UsersController < ApplicationController
     def user_params
 
       params.require(:user).permit(:email, :password, :password_confirmation, :role_id)
-      
+
     end
 end
