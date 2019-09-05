@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_03_211218) do
+ActiveRecord::Schema.define(version: 2019_09_05_203152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "entrada_salidas", force: :cascade do |t|
+    t.datetime "datetime"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_entrada_salidas_on_user_id"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name_roles"
@@ -30,5 +38,6 @@ ActiveRecord::Schema.define(version: 2019_09_03_211218) do
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 
+  add_foreign_key "entrada_salidas", "users"
   add_foreign_key "users", "roles"
 end
