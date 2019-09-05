@@ -1,5 +1,7 @@
 class EntradaSalidasController < ApplicationController
   before_action :set_entrada_salida, only: [:show, :update, :destroy]
+  before_action :authenticate_user
+  before_action :is_admin?
 
   # GET /entrada_salidas
   def index
