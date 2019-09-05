@@ -1,5 +1,6 @@
 role = Role.create([{ name_roles: 'admin'}, { name_roles: 'user'}])
-
+#create un usuario que es administrador por default , y que tiene que estar authenticate
+user = User.create ({email: "mj@gmail.com", password: "3012", role_id: 1})
 
 
 # This file should contain all the record creation needed to seed the database with its default values.

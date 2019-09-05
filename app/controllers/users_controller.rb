@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
+    byebug
     @users = User.all
 
     render json: @users
