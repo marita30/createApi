@@ -20,6 +20,7 @@ Aplicamos la semilla (seed) para crear por default los roles si es administrador
 ## Routes
 * /users method: post --> create users.
 * /users method: get --> Mostrar users.
+* /user_token method:Post --> Create token.
 
 ## Autores ✒️
 * **Maria Jose** - *Trabajo Inicial* - [marita30](https:https://github.com/marita30)
