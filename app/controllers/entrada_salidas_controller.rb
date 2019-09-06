@@ -5,9 +5,11 @@ class EntradaSalidasController < ApplicationController
 
   # GET /entrada_salidas
   def index
-    @entrada_salidas = EntradaSalida.all
+     #Filtrar por parametros user_id.
+    @entrada_salidas = EntradaSalida.all if params["user_id"].nil?
+    @entrada_salidas = EntradaSalida.find_by(user_id: params[:user_id]) unless params["name_roles"].nil?
 
-    render json: @entrada_salidas
+    render json:  {"error": [], "values": @entrada_salidas}, status: :ok
   end
 
   # GET /entrada_salidas/1
