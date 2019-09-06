@@ -30,10 +30,13 @@ class EntradaSalidasController < ApplicationController
 
   # PATCH/PUT /entrada_salidas/1
   def update
+   
     if @entrada_salida.update(entrada_salida_params)
-      render json: @entrada_salida
+       #Error no contiene nada porque es un admin y los valores que trae la variable @user.
+       render json:  {"error": [], "values": @entrada_salida }, status: :accepted
     else
-      render json: @entrada_salida.errors, status: :unprocessable_entity
+       #Error si contiene porque no es un admin y los valores null.
+      render json: {"error": @entrada_salida.errors, "values":[]}, status: :unprocessable_entity
     end
   end
 
