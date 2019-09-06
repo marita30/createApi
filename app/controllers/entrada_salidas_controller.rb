@@ -48,6 +48,6 @@ class EntradaSalidasController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def entrada_salida_params
-      params.require(:entrada_salida).permit(:datetime, :user_id)
+      params.require(:entrada_salida).permit(:datetimeEntrance, :user_id, :datetimeExit)
     end
 end
