@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     #Estructura de json.
     render json:  {"error": [], "values": @users}, status: :ok
   end
-  
+
   # GET /current_user/details
   def current_user_details
     @user = User.where(id: current_user.id)
