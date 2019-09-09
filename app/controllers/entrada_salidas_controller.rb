@@ -42,7 +42,8 @@ class EntradaSalidasController < ApplicationController
 
   # DELETE /entrada_salidas/1
   def destroy
-    @entrada_salida.destroy
+    render json: { message: 'entrada/salidas Successfully deleted' }, status: 202 if  @entrada_salida.destroy
+    render json: { message: 'entrada/salidas Unsuccessfully deleted' }, status: 204 unless  @entrada_salida.destroy
   end
 
   private
