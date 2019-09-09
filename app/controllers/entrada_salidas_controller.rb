@@ -1,7 +1,15 @@
 class EntradaSalidasController < ApplicationController
   before_action :set_entrada_salida, only: [:show, :update, :destroy]
   before_action :authenticate_user
-  before_action :is_admin?
+  before_action :is_admin?, only: [:create, :index, :show, :update]
+
+  #Mostrarle al usuario sus detalles de e/s
+  def current_user_entrada_salidas_details
+    @user_entrada_salidas = EntradaSalida.where('user_id = ? AND date BETWEEN ? AND ?',
+                                         current_user.id, params[:datetimeEntrance], params[:datetimeExit]) unless params[:datetimeEntrance].nil? || params[:datetimeExit].nil?
+     @user_entrada_salidas = EntradaSalida.where(user_id: current_user.id) if params[:datetimeEntrance].nil? || params[:datetimeExit].nil?
+    render json:  @user_entrada_salidas, status: 200
+  end
 
   # GET /entrada_salidas
   def index
