@@ -4,6 +4,7 @@ class EntradaSalidasController < ApplicationController
   before_action :is_admin?, only: [:create, :index, :show, :update]
 
   #Mostrarle al usuario sus detalles de e/s
+  # GET /current_user/entrada_salidas/details 
   def current_user_entrada_salidas_details
     @user_entrada_salidas = EntradaSalida.where('user_id = ? AND date BETWEEN ? AND ?',
                                          current_user.id, params[:datetimeEntrance], params[:datetimeExit]) unless params[:datetimeEntrance].nil? || params[:datetimeExit].nil?
