@@ -24,6 +24,7 @@ Aplicamos la semilla (seed) para crear por default los roles si es administrador
 * /user_token method:Post --> Create token.
 * /entrada_salidas method:Post ---> create e/s del users.
 * /entrada_salidas/id method:Patch --> Para cambiar la fecha de la salida del users.
+* /current_user/details' method:Get --> Para mandarle a mostrar a los users su informacion.
 
 ## Autores ✒️
 * **Maria Jose** - *Trabajo Inicial* - [marita30](https:https://github.com/marita30)
