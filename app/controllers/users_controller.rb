@@ -1,9 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
   before_action :authenticate_user
-
   #Verificar en el metodo si es un administrador o un usuario :is_admin en el archivo Application_controller en el method update y index.
-  before_action :is_admin?, only: [:update, :index]
+  before_action :is_admin?, except: :current_user_details
 
 
   # GET /users
@@ -14,6 +13,11 @@ class UsersController < ApplicationController
     
     #Estructura de json.
     render json:  {"error": [], "values": @users}, status: :ok
+  end
+
+  def current_user_details
+    @user = User.where(id: current_user.id)
+    render json: @user, status: :ok
   end
 
   # GET /users/1
