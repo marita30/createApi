@@ -19,6 +19,8 @@ gem 'puma', '~> 3.11'
 gem 'knock'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bcrypt'
+#gem cors para los permisos que reciba peticion de cualquier servidor
+gem 'rack-cors'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
