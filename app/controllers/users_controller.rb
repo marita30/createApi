@@ -26,7 +26,7 @@ class UsersController < ApplicationController
    
     render json: @user
 
-  end
+  en
 
   # POST /users
   def create
